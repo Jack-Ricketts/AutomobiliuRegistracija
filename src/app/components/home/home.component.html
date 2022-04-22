@@ -1,1 +1,30 @@
-<p>home works!</p>
+<div class="card">
+    <div class="card-header">
+        Registraciju sarasas
+    </div>
+    <div class="card-body">
+        <div class="table">
+            <thead>
+                <tr>
+                    <th>Marke</th>
+                    <th>Modelis</th>
+                    <th>Reg. nr.</th>
+                    <th>Metai</th>
+                    <th>Telefonas</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let registration of registrations">
+                    <td>{{ registration.mark }}</td>
+                    <td>{{ registration.model }}</td>
+                    <td>{{ registration.reg_number }}</td>
+                    <td>{{ registration.year }}</td>
+                    <td>{{ registration.phone }}</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </div>
+    </div>
+</div>
