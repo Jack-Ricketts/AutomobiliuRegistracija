@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Registration } from 'src/app/models/registration';
@@ -24,10 +24,14 @@ export class NewRegistrationComponent implements OnInit {
       fData.model,
       fData.reg_number,
       fData.phone,
-      fData.year,
+      fData.year
     );
-      this.registrationService.addRegistration(registration).subscribe((respone)=>{
-      this.router.navigate(['/'])
-    })
+    console.log(registration);
+    this.registrationService.addRegistration(registration).subscribe((response)=>{
+      console.log("Įrašas pridėtas, atsakymas: ");
+      console.log(response);
+      this.router.navigate(["/"]);
+    });
+   
   }
 }
