@@ -1,12 +1,11 @@
-export class AuthReponseData{
-    constructor(
-        private kind:String,
-        private idToken:String,
-        private email:String,
-        private refreshToken:String,
-        private expiresIn:String,
-        private localId:String
-        
+export class AuthResponseData{
+    constructor (
+        public kind:String,
+        public idToken:String,
+        public email:String,
+        public refreshToken:String,
+        public expiresIn:String,
+        public localId:String
     ){
 
     }
