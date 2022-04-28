@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthResponseData } from 'src/app/models/authResponseData';
-
 import { Registration } from 'src/app/models/registration';
 import { AuthService } from 'src/app/services/auth.service';
 import { RegistrationService } from 'src/app/services/registration.service';
@@ -36,14 +35,4 @@ export class HomeComponent implements OnInit {
       this.loadData();
     });
   }
-
-  onLogout(){
-    this.auth.logout();
-    this.router.navigate(['/login']);
-
-
-  }
-
-
-
 }
