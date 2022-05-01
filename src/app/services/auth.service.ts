@@ -51,26 +51,13 @@ export class AuthService {
     return this.authAPICall("https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key="+this.key,email,password);
 
   }
-/*
-  public changPassword(){
-    return this.http.post<AuthResponseData>("https://identitytoolkit.googleapis.com/v1/accounts:update?key="+this.key,{
-      ...slapažodis....
-      ...idToken... 
-      returnSecureToken:true
-    }).pipe(  tap(  (response)=>{
-      this.isLoggedIn=true;
-      this.user=response;
-      this.userUpdated.emit();
-    }));
-  }
-*/
+
   public logout(){
     this.isLoggedIn=false;
     this.user=undefined;
     localStorage.removeItem('user');
     this.userUpdated.emit();
   }
-
 }
 
 // AIzaSyCyiZQVovmoAYC5FhFj9hHpdAw9Up48pKo

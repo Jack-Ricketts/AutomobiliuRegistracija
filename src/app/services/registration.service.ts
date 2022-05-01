@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Registration } from '../models/registration';
@@ -9,7 +9,7 @@ import { AuthService } from './auth.service';
 })
 export class RegistrationService {
 
-  private readonly url:String="https://autoreg-b143a-default-rtdb.europe-west1.firebasedatabase.app"; 
+  private readonly url:String="https://automobiliuregistracija-default-rtdb.europe-west1.firebasedatabase.app/"; 
 
   constructor(private http:HttpClient, private auth:AuthService) { 
 
