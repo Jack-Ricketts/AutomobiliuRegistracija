@@ -14,6 +14,7 @@ import { AuthComponent } from './components/auth/auth.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { NewTechnicianComponent } from './components/new-technician/new-technician.component';
 import { TechnitianComponent } from './components/technitian/technitian.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { TechnitianComponent } from './components/technitian/technitian.componen
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,
